@@ -115,6 +115,7 @@
   .nav__burger:hover .nav__burger-line {
     background: transparent;
   }
+
   .nav__burger:hover .nav__burger-line::before {
     transform: rotate(-45deg);
     top: 0;
@@ -123,6 +124,7 @@
     transform: rotate(45deg);
     top: 0;
   }
+
   .nav__menu {
     position: fixed;
     top: 0;
@@ -135,9 +137,14 @@
     z-index: 10;
     transition: 0.4s;
   }
-  .nav__burger:hover ~ .nav__menu {
+
+  .nav__menu.active {
     left: 0;
   }
+
+  /* .nav__burger:hover ~ .nav__menu {
+    left: 0;
+  } */
   .nav__list {
     flex-direction: column;
   }
@@ -350,7 +357,7 @@ z-index: -1;
   transition: 0.4s;
   flex-shrink: 0;
   scroll-snap-align: center;
-}
+} 
 .collections__card-image{
   position: absolute;
   top: 0;
